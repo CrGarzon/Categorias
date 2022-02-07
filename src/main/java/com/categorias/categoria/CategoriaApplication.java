@@ -6,10 +6,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 
+
 @SpringBootApplication
 @EnableAutoConfiguration
-@EntityScan(basePackages = {"entities"})
-@ComponentScan(basePackages = "categorias,entities,repositories,controller")
+@EntityScan(basePackages = {"com.categorias.categoria.entities"})
+@ComponentScan(basePackages = "com.categorias.categoria,com.categorias.categoria.entities,com.categorias.categoria.repositories,com.categorias.categoria.controller")
 
 
 public class CategoriaApplication {
