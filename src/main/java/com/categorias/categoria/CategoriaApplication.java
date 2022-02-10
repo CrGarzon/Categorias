@@ -12,7 +12,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableAutoConfiguration
 @EntityScan(basePackages = {"com.categorias.categoria.entities"})
 @ComponentScan(basePackages = "com.categorias.categoria,com.categorias.categoria.entities,com.categorias.categoria.repositories,com.categorias.categoria.controller")
-@EnableJpaRepositories
+@EnableJpaRepositories("com.categorias.categoria.repositories")
 
 public class CategoriaApplication {
 

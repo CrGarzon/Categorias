@@ -9,5 +9,7 @@ import com.categorias.categoria.entities.Categoria;
 
 @Repository
 public interface CategoriaRepository extends JpaRepository<Categoria, Long> {
-	List<Categoria> findByName (String name);
+	List<Categoria> findByNombre (String nombre);
 }
+
+
