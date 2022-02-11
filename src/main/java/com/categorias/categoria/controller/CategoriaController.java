@@ -16,6 +16,7 @@ import com.categorias.categoria.entities.Categoria;
 import com.categorias.categoria.repositories.CategoriaRepository;
 
 
+
 @RestController
 @RequestMapping("/categoria")
 @CrossOrigin
@@ -49,4 +50,13 @@ public class CategoriaController {
 		return "Categoria deleted";
 	}
 
+	@RequestMapping(path="/getByNombre", method = RequestMethod.GET)
+	public @ResponseBody List<Categoria> getByName(@RequestParam String nombre) {
+	    return CategoriaRepositoryDAO.findByNombre(nombre);
+	}
+	
+	@RequestMapping (path = "/getByid", method = RequestMethod.GET)
+	public @ResponseBody Optional<Categoria>  getByid(@RequestParam long id){	
+		return CategoriaRepositoryDAO.findById(id);
+	}
 }
